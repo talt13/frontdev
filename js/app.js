@@ -6,8 +6,7 @@ function checkParams() {
             $('#submitbutton').removeAttr('disabled');
             
         } else {
-            $('#submitbutton').attr('disabled', 'disabled'),
-            alert('Поле обязательно для заполнения')
+            $('#submitbutton').attr('disabled', 'disabled');
         }
     };
     text.onblur = function() {
