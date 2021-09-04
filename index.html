@@ -31,16 +31,16 @@
         </div>
         <div class="section__main">
             <div class="form__wrapper">
-                <div class="form"> <form action="#" method="POST"></form>
-                    <p class="form-imput__title name" id="required">Наименование товара</p>
-                    <input type="text" placeholder="Введите наименование товара">
+                <div class="form"> <form action="#" method="POST">
+                    <p class="form-imput__title name" id="required" maxlength="15">Наименование товара</p>
+                    <input type="text" onkeyup="checkParams()" placeholder="Введите наименование товара">
                     <p class="form-imput__title">Описание товара</p>
                     <input class="input__description" type="name"  placeholder="Введите описание товара">
                     <p class="form-imput__title link">Ссылка на изображение товара</p>
-                    <input type="name" id="required" placeholder="Введите ссылку">
+                    <input type="text" onkeyup="checkParams()" id="required" placeholder="Введите ссылку">
                     <p class="form-imput__title price">Цена товара</p>
-                    <input type="number" id="required" placeholder="Введите цену">
-                    <button id="submitbutton" disabled="disabled" value="Submit">Добавить товар</button> </form>
+                    <input type="number" onkeyup="checkParams()" id="required" placeholder="Введите цену"maxlength="7">
+                    <button id="submitbutton" value="" disabled> Добавить товар</button> </form>
                 </div>
              </div>
             <div class="products">

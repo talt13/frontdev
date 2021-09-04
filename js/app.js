@@ -5,24 +5,26 @@ function checkParams() {
         if(text.length >=1) {
             $('#submitbutton').removeAttr('disabled');
             
-        } else {
+        } 
+        else {
             $('#submitbutton').attr('disabled', 'disabled');
-        }
-    };
-    text.onblur = function() {
-        if(input.length >=1) { 
-        input.classList.add('invalid');
-        error.innerHTML = 'Поле является обязательным для ввода'
-        }
-    };
+        };
+    
+        text.onblur = function() {
+            if(input.length >=1) { 
+            input.classList.add('invalid');
+            error.innerHTML = 'Поле является обязательным для ввода'
+            }
+        };
 
-    text.onfocus = function() {
-        if (this.classList.contains('invalid')) {
+        text.onfocus = function() {
+            if (this.classList.contains('invalid')) {
 
-        this.classList.remove('invalid');
-        error.innerHTML = "";
-        }
-    };
+            this.classList.remove('invalid');
+            error.innerHTML = "";
+            }
+        };
+};
 
 
 $('#submitbutton').on('click', function () {
@@ -36,3 +38,4 @@ $('#submitbutton').on('click', function () {
     }
 });
     
+checkParams();
