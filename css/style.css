@@ -248,6 +248,8 @@ input, select, button { outline: none }
     cursor: pointer;
     transition: .3s;
     margin: 16px auto 24px;
+    
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
 }
 .products{
     display: grid;
@@ -321,15 +323,7 @@ input, select, button { outline: none }
     color: #3F3F3F;
     padding-top: 32px;
 }
-.error{
-    color: #FF8484;
-    position: absolute;
-    padding: 3px;
-}
-input:invalid{
+
+.invalid{
     border:1px solid #FF8484;
-  }
-  
-  input:focus:invalid {
-    outline: none;
   }
