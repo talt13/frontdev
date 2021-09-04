@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestList</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h2 class="header__name">TestList</h2>
+            <a class="basket" href="cart.html">
+                <img src="/css/assets/basket.svg" alt="">
+                <span id="total-cart-count" class="badge">1</span>
+            </a>
+        </div>
+    </header>
+    <section class="section">
+        <div class="section__top">
+            <h1 class="section-top__title">
+                Добавление товара
+            </h1>
+            <div class="section-top__choise">
+                <p>По умолчанию</p>
+                <div class="section-top__choise-btn"></div>
+            </div>
+        </div>
+        <div class="section__main">
+            <div class="form__wrapper">
+                <div class="form"> <form action="#"method="POST" onsubmit="return validateCreditCardForm()"></form>
+                    <p class="form-imput__title name" id="required">Наименование товара</p>
+                    <input type="text" placeholder="Введите наименование товара">
+                    <p class="form-imput__title">Описание товара</p>
+                    <input class="input__description" type="name"  placeholder="Введите описание товара">
+                    <p class="form-imput__title link">Ссылка на изображение товара</p>
+                    <input type="name" id="required" placeholder="Введите ссылку">
+                    <p class="form-imput__title price">Цена товара</p>
+                    <input type="number" id="required" placeholder="Введите цену">
+                    <button id="submitbutton" disabled="disabled" value="Submit">Добавить товар</button> </form>
+                </div>
+             </div>
+            <div class="products">
+                <div class="product-item">
+                    <div class="product-item__img">
+                        <img src="/css/assets/product-img.jpg" alt="product">
+                    </div>
+                   <div class="product-item__wrapper">
+                        <div class="product-item__title">Наименование товара</div>
+                        <div class="product-item__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</div> 
+                        <div class="product-item__price">10 000 руб.</div>
+                   </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item__img">
+                        <img src="/css/assets/product-img.jpg" alt="product">
+                    </div>
+                    <div class="product-item__wrapper">
+                        <div class="product-item__title">Наименование товара</div>
+                        <div class="product-item__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</div> 
+                        <div class="product-item__price">10 000 руб.</div>
+                   </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item__img">
+                        <img src="/css/assets/product-img.jpg" alt="product">
+                    </div>
+                    <div class="product-item__wrapper">
+                        <div class="product-item__title">Наименование товара</div>
+                        <div class="product-item__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</div> 
+                        <div class="product-item__price">10 000 руб.</div>
+                   </div>
+                </div>
+                
+                <div class="product-item">
+                    <div class="product-item__img">
+                        <img src="/css/assets/product-img.jpg" alt="product">
+                    </div>
+                   <div class="product-item__wrapper">
+                        <div class="product-item__title">Наименование товара</div>
+                        <div class="product-item__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</div> 
+                        <div class="product-item__price">10 000 руб.</div>
+                   </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item__img">
+                        <img src="/css/assets/product-img.jpg" alt="product">
+                    </div>
+                    <div class="product-item__wrapper">
+                        <div class="product-item__title">Наименование товара</div>
+                        <div class="product-item__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</div> 
+                        <div class="product-item__price">10 000 руб.</div>
+                   </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item__img">
+                        <img src="/css/assets/product-img.jpg" alt="product">
+                    </div>
+                    <div class="product-item__wrapper">
+                        <div class="product-item__title">Наименование товара</div>
+                        <div class="product-item__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</div> 
+                        <div class="product-item__price">10 000 руб.</div>
+                   </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item__img">
+                        <img src="/css/assets/product-img.jpg" alt="product">
+                    </div>
+                   <div class="product-item__wrapper">
+                        <div class="product-item__title">Наименование товара</div>
+                        <div class="product-item__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</div> 
+                        <div class="product-item__price">10 000 руб.</div>
+                   </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item__img">
+                        <img src="/css/assets/product-img.jpg" alt="product">
+                    </div>
+                    <div class="product-item__wrapper">
+                        <div class="product-item__title">Наименование товара</div>
+                        <div class="product-item__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</div> 
+                        <div class="product-item__price">10 000 руб.</div>
+                   </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item__img">
+                        <img src="/css/assets/product-img.jpg" alt="product">
+                    </div>
+                    <div class="product-item__wrapper">
+                        <div class="product-item__title">Наименование товара</div>
+                        <div class="product-item__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</div> 
+                        <div class="product-item__price">10 000 руб.</div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
