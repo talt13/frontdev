@@ -1,35 +1,39 @@
-
-    function checkForm(form) {
-            var e = 0;
-            for (var i = 0; i < form.length-1; i++) {
-                if (!form[i].value.replace(/^\s+|\s+$/g, '')){
-                    form[i].style.border='1px solid #FF8484';
-                    e = 1;
-                }
-            }
-            if(e) {
-                alert ('Поле является обязательным для ввода');
-                {
-                    alert.style.color='#FF8484'
-                };
-                return false;
-            }
+function checkParams() {
+        var text = $('#required').val();
+       
+         
+        if(text.length >=1) {
+            $('#submitbutton').removeAttr('disabled');
+            
+        } else {
+            $('#submitbutton').attr('disabled', 'disabled'),
+            alert('Поле обязательно для заполнения')
         }
-        
+    };
+    text.onblur = function() {
+        if(input.length >=1) { 
+        input.classList.add('invalid');
+        error.innerHTML = 'Поле является обязательным для ввода'
+        }
+    };
 
-var inputs = document.querySelectorId('required');
-var button = document.querySelectorId('submitbutton');
+    text.onfocus = function() {
+        if (this.classList.contains('invalid')) {
 
-var handleChange = () => {
-	for	(var input of inputs) {
-  	if (input.value === "") {
-    	button.setAttribute('disabled', '');
-    	return;
+        this.classList.remove('invalid');
+        error.innerHTML = "";
+        }
+    };
+
+
+$('#submitbutton').on('click', function () {
+    var validation = true;
+    if (validation) {
+
+        return true;
     }
-  }
-  button.removeAttribute('disabled');
-}
-
-for (var input of inputs) {
-	input.onkeydown = input.onkeyup = input.onkeypress = input.change = handleChange;
-}
+    else {
+        return false;
+    }
+});
+    
