@@ -263,7 +263,33 @@ input, select, button { outline: none }
     background: #FFFEFB;
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02);
     border-radius: 4px;
+    position: relative;
     
+}
+.delete{
+    position: absolute;
+    background-color: #FF8484;
+    top: -8px;
+    right: -8px;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delete:hover{
+    transform: scale(1.2);
+} 
+.delete img{
+    height: 16px;
+    width: 16px;
 }
 .product-item__img img{
     width: 100%;
