@@ -324,9 +324,6 @@ input, select, button { outline: none }
     padding-top: 32px;
 }
 
-input:invalid{
-    border: 2px solid #FF8484;
-}
-.error{
-    color: #FF8484;
-}
+.invalid{
+    border:1px solid #FF8484;
+  }

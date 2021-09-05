@@ -1,41 +1,57 @@
-function checkParams() {
-        var text = $('#required').val();
-       
-         
-        if(text.length >=1) {
-            $('#submitbutton').removeAttr('disabled');
-            
-        } 
-        else {
-            $('#submitbutton').attr('disabled', 'disabled');
-        };
-    
-        text.onblur = function() {
-            if(input.length >=1) { 
-            input.classList.add('invalid');
-            error.innerHTML = 'Поле является обязательным для ввода'
-            }
-        };
-
-        text.onfocus = function() {
-            if (this.classList.contains('invalid')) {
-
-            this.classList.remove('invalid');
-            error.innerHTML = "";
-            }
-        };
+// data var
+let flagsData = {};
+const data = {
+  stuff: "",
+  link: "",
+  price: "",
 };
 
+// dom elements
+const stuffInputEl = document.querySelector(".stuff");
+const linkInputEl = document.querySelector(".linkUniq");
+const priceInputEl = document.querySelector(".priceUniq");
+const submitBtnEl = document.querySelector("#submitbutton");
 
-$('#submitbutton').on('click', function () {
-    var validation = true;
-    if (validation) {
+//functions
+const onChangeStuffInput = () => {
+  const inputText = stuffInputEl.value;
+  incrementFlagValue(inputText, "stuff");
+  data.stuff = inputText;
+  checkParams();
+};
 
-        return true;
-    }
-    else {
-        return false;
-    }
-});
-    
-checkParams();
+const onChangeLinkInput = () => {
+  const inputText = linkInputEl.value;
+  incrementFlagValue(inputText, "link");
+  data.link = inputText;
+  checkParams();
+};
+
+const onChangePriceInput = () => {
+  const inputText = priceInputEl.value;
+  incrementFlagValue(inputText, "price");
+  data.price = inputText;
+  checkParams();
+};
+
+const onSubmitClick = () => {
+  console.log(data);
+};
+
+const incrementFlagValue = (inputText, propName) => {
+  if (inputText != "") {
+    propName[propName] = true;
+  }
+};
+
+const checkParams = () => {
+  if (data.stuff !== "" && data.link !== "" && data.price !== "") {
+    submitBtnEl.removeAttribute("disabled");
+  }
+};
+
+//events
+stuffInputEl.addEventListener("blur", onChangeStuffInput);
+linkInputEl.addEventListener("blur", onChangeLinkInput);
+priceInputEl.addEventListener("blur", onChangePriceInput);
+submitBtnEl.addEventListener("click", onSubmitClick);
